@@ -1,0 +1,14 @@
+.card-style {
+    border-radius: 40px;
+    box-shadow: 10px 8px 5px rgb(119, 115, 115);
+}
+
+.card-style img {
+    width: 75%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.card-style:hover {
+    box-shadow: 20px 20px 25px rgb(119, 115, 115);
+}

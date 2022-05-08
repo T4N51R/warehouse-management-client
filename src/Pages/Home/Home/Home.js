@@ -1,6 +1,4 @@
 import React from 'react';
-import { Row } from 'react-bootstrap';
-import LoadProducts from '../../../hooks/LoadProducts';
 import Banner from '../Banner/Banner';
 import Items from '../Items/Items';
 

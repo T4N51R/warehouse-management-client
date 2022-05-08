@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const LoadProducts = () => {
+const UseLoadProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('fakedata.json')
@@ -10,4 +10,4 @@ const LoadProducts = () => {
     return [products, setProducts];
 }
 
-export default LoadProducts;
+export default UseLoadProducts;

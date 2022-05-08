@@ -1,18 +1,14 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import './item.css'
-const Item = ({ item }) => {
-    const { _id, name, img, price, qty, about, supplier_name } = item;
-    const navigate = useNavigate();
-    const handleUpdateNow = (id) => {
-        navigate(`/details/${_id}`)
-    }
+import './Inventory.css'
+
+const Inventory = ({ product }) => {
+    const { _id, name, img, price, qty, about, supplier_name } = product;
     return (
-        <div>
+        <div className=''>
             <Col >
                 <Card className='card-style mx-auto'
-                    style={{ width: '18rem' }}>
+                    style={{ width: '40rem' }}>
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
@@ -25,7 +21,7 @@ const Item = ({ item }) => {
                     </Card.Body>
                     {/* button will take on to the inventory page */}
                     <Card.Body>
-                        <Button className='w-50 mx-auto d-block' onClick={() => handleUpdateNow(_id)}>Update</Button>
+                        <Button className='w-50 mx-auto d-block' onClick={() => (_id)}>Delete</Button>
                     </Card.Body>
                 </Card>
             </Col>
@@ -33,4 +29,4 @@ const Item = ({ item }) => {
     );
 };
 
-export default Item;
+export default Inventory;
