@@ -37,7 +37,7 @@ const LogIn = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Enter Password" />
                 </Form.Group>
                 <Button className="w-50 mx-auto mb-3 d-block py-2 fs-4" variant="primary" type="submit">
-                    Submit
+                    Log In
                 </Button>
                 <p className='text-center fs-3'>Don't Have an Account?<Link to='/register' className='text-primary text-decoration-none ms-2'>Sign Up</Link></p>
             </Form>
