@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const LogIn = () => {
     return (
@@ -17,6 +18,7 @@ const LogIn = () => {
                 <Button className="w-50 mx-auto mb-3 d-block py-2 fs-4" variant="primary" type="submit">
                     Submit
                 </Button>
+                <p className='text-center fs-3'>Don't Have an Account?<Link to='/register' className='text-primary text-decoration-none ms-2'>Sign Up</Link></p>
             </Form>
         </div>
     );
