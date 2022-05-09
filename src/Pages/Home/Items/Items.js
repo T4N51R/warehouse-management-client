@@ -8,7 +8,7 @@ const Items = ({ item }) => {
 
     const selelctedProducts = products.slice(0, 6);
     return (
-        <div className='mt-5'>
+        <div className='mt-5' id='product'>
             <h1 className='text-center text-primary mb-5'>Our Products</h1>
             <Container>
                 {/* Sending data into item component  */}
