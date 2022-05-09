@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
+import SocialLogIn from '../SocailLogIn/SocialLogIn';
 const LogIn = () => {
     const [
         signInWithEmailAndPassword,
@@ -41,6 +42,7 @@ const LogIn = () => {
                 </Button>
                 <p className='text-center fs-3'>Don't Have an Account?<Link to='/register' className='text-primary text-decoration-none ms-2'>Sign Up</Link></p>
             </Form>
+            <SocialLogIn></SocialLogIn>
         </div>
     );
 };
