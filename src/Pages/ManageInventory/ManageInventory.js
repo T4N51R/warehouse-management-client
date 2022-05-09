@@ -10,6 +10,7 @@ const ManageInventory = () => {
     const handleAddNewItem = () => {
         navigate('/additem')
     }
+    console.log(products)
     return (
         <div className='mt-5'>
             <div>
