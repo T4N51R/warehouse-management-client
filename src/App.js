@@ -1,4 +1,5 @@
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home/Home';
 import Header from './Pages/Shared/Header/Header';
@@ -10,6 +11,7 @@ import AddItem from './Pages/AddNewItem/AddItem';
 import LogIn from './Pages/LogIn/LogIn/LogIn';
 import SignUp from './Pages/LogIn/SignUp/SignUp';
 import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
+import { ToastContainer } from 'react-bootstrap';
 
 function App() {
   return (
@@ -20,7 +22,11 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
-        <Route path='/additem' element={<AddItem></AddItem>}></Route>
+        <Route path='/additem' element={
+          <RequiredAuth>
+            <AddItem></AddItem>
+          </RequiredAuth>
+        }></Route>
         <Route path='/details/:productId' element={
           <RequiredAuth>
             <ProductDetails></ProductDetails>
@@ -30,6 +36,7 @@ function App() {
         <Route path='/register' element={<SignUp></SignUp>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

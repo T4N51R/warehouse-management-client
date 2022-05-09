@@ -1,26 +1,34 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogIn from '../SocailLogIn/SocialLogIn';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignUp = () => {
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const location = useLocation();
     const navigate = useNavigate();
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
-
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    // Spinner Added 
+    if (loading) {
+        return <Loading></Loading>
+    }
     // navigate user 
+    let from = location.state?.from?.pathname || "/";
     if (user) {
-        navigate('/blogs')
+        navigate(from, { replace: true });
     }
 
     // create an user 
@@ -29,6 +37,7 @@ const SignUp = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         createUserWithEmailAndPassword(email, password);
+        toast('Email send For Varification');
     }
 
     // show error to the user 
@@ -61,6 +70,7 @@ const SignUp = () => {
                 <p className='text-center fs-3'>Already Have an Account?<Link to='/login' className='text-primary text-decoration-none ms-2'>Log In</Link></p>
             </Form>
             <SocialLogIn></SocialLogIn>
+            <ToastContainer />
         </div>
     );
 };

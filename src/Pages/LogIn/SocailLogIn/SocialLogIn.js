@@ -1,18 +1,35 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../image/social/google.png'
+import Loading from '../../Shared/Loading/Loading';
 const SocialLogIn = () => {
     const [signInWithGoogle,
         user,
         loading,
         error] = useSignInWithGoogle(auth);
 
+    //Send user to where he came from
+    const location = useLocation();
+    const navigate = useNavigate()
+    let from = location.state?.from?.pathname || "/";
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    // Spinner Added 
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     // Show error messege 
     let errorMessege;
     if (error) {
         errorMessege = <p className='text-danger text-center'>Error: {error?.message}</p>
     }
+
+
     return (
         <div>
             <div>
