@@ -9,6 +9,7 @@ import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import AddItem from './Pages/AddNewItem/AddItem';
 import LogIn from './Pages/LogIn/LogIn/LogIn';
 import SignUp from './Pages/LogIn/SignUp/SignUp';
+import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
 
 function App() {
   return (
