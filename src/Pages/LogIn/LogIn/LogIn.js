@@ -15,14 +15,23 @@ const LogIn = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
 
+    // navigate user to home after log in 
     if (user) {
         navigate('/')
     }
+
+    // Log in with email and password 
     const handleLogIn = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
+    }
+
+    // Show error messege 
+    let errorMessege;
+    if (error) {
+        errorMessege = <p className='text-danger text-center'>Error: {error?.message}</p>
     }
 
     return (
@@ -37,6 +46,7 @@ const LogIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Enter Password" />
                 </Form.Group>
+                {errorMessege}
                 <Button className="w-50 mx-auto mb-3 d-block py-2 fs-4" variant="primary" type="submit">
                     Log In
                 </Button>

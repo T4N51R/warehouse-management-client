@@ -17,19 +17,27 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    // navigate user 
     if (user) {
         navigate('/blogs')
     }
+
+    // create an user 
     const handleSignUp = (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         createUserWithEmailAndPassword(email, password);
     }
-    let errorText;
+
+    // show error to the user 
+    let errorMessege;
     if (error) {
-        errorText = <p className='fs-4 text-danger text-center'>Error : {error?.message}</p>
+        errorMessege = <p className='fs-3 text-danger text-center '>Error : {error?.message}</p>
     }
+
+
     return (
         <div className='container fs-4'>
             <h1 className='text-primary text-center'>Please Create An Account</h1>
@@ -46,6 +54,7 @@ const SignUp = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Enter Password" />
                 </Form.Group>
+                {errorMessege}
                 <Button className="w-50 mx-auto mb-3 d-block py-2 fs-4" variant="primary" type="submit">
                     Register
                 </Button>

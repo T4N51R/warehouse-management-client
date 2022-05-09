@@ -7,6 +7,12 @@ const SocialLogIn = () => {
         user,
         loading,
         error] = useSignInWithGoogle(auth);
+
+    // Show error messege 
+    let errorMessege;
+    if (error) {
+        errorMessege = <p className='text-danger text-center'>Error: {error?.message}</p>
+    }
     return (
         <div>
             <div>
@@ -16,6 +22,7 @@ const SocialLogIn = () => {
                     <div style={{ height: '1px' }} className='bg-primary w-50'></div>
                 </div>
             </div>
+            {errorMessege}
             <div>
                 <button
                     onClick={() => signInWithGoogle()}
