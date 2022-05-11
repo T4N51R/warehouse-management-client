@@ -1,11 +1,12 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import UseLoadProducts from '../../../hooks/UseLoadProducts';
 import Item from '../Item/Item';
 
 const Items = ({ item }) => {
     const [products, setProducts] = UseLoadProducts();
-
+    const navigate = useNavigate()
     const selelctedProducts = products.slice(0, 6);
     return (
         <div className='mt-5' id='product'>
@@ -20,6 +21,7 @@ const Items = ({ item }) => {
                         ></Item>)
                     }
                 </Row>
+                <Button className='w-50 mx-auto d-block mt-5' onClick={() => navigate('/inventory')}>See All Product</Button>
             </Container>
         </div>
     );

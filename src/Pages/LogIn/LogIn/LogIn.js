@@ -7,6 +7,8 @@ import SocialLogIn from '../SocailLogIn/SocialLogIn';
 import Loading from '../../Shared/Loading/Loading';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
+import axios from 'axios';
+import useToken from '../../../hooks/useToken';
 const LogIn = () => {
     const [
         signInWithEmailAndPassword,
@@ -22,10 +24,10 @@ const LogIn = () => {
     const location = useLocation();
     const emailRef = useRef('');
     const passwordRef = useRef('');
-
+    const [token] = useToken(user)
     // navigate user to home after log in 
     let from = location.state?.from?.pathname || "/";
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
@@ -34,11 +36,11 @@ const LogIn = () => {
         return <Loading></Loading>
     }
     // Log in with email and password 
-    const handleLogIn = event => {
+    const handleLogIn = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
     }
 
     // Show error messege 

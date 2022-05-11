@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import LoadProducts from '../../hooks/UseLoadProducts';
+import UseLoadProducts from '../../hooks/UseLoadProducts';
 import Inventory from '../Inventory/Inventory';
 
 const ManageInventory = () => {
-    const [products] = LoadProducts();
+    const [products] = UseLoadProducts();
     const navigate = useNavigate();
     const handleAddNewItem = () => {
         navigate('/additem')

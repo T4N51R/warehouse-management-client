@@ -2,6 +2,7 @@ import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useToken from '../../../hooks/useToken';
 import google from '../../../image/social/google.png'
 import Loading from '../../Shared/Loading/Loading';
 const SocialLogIn = () => {
@@ -9,12 +10,12 @@ const SocialLogIn = () => {
         user,
         loading,
         error] = useSignInWithGoogle(auth);
-
+    const [token] = useToken(user)
     //Send user to where he came from
     const location = useLocation();
     const navigate = useNavigate()
     let from = location.state?.from?.pathname || "/";
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

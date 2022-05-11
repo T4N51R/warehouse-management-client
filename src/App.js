@@ -12,6 +12,8 @@ import LogIn from './Pages/LogIn/LogIn/LogIn';
 import SignUp from './Pages/LogIn/SignUp/SignUp';
 import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
 import { ToastContainer } from 'react-bootstrap';
+import MyItem from './Pages/MyItem/MyItem';
+import Error404 from './Pages/Error404/Error404';
 
 function App() {
   return (
@@ -32,8 +34,14 @@ function App() {
             <ProductDetails></ProductDetails>
           </RequiredAuth>
         }></Route>
+        <Route path='/myitem' element={
+          <RequiredAuth>
+            <MyItem></MyItem>
+          </RequiredAuth>
+        }></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/register' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<Error404></Error404>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

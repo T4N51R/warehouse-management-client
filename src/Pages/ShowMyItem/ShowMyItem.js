@@ -1,19 +1,17 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import useCart from '../../hooks/useCart';
 import UseLoadProducts from '../../hooks/UseLoadProducts';
-import 'react-toastify/dist/ReactToastify.css';
-import './Inventory.css'
-import { useNavigate } from 'react-router-dom';
 
-const Inventory = ({ product }) => {
+const ShowMyItem = ({ product }) => {
     const { _id, name, img, price, qty, about, supplier_name } = product;
-    const navigate = useNavigate();
     const [products, setProducts] = UseLoadProducts();
-    const handleDelete = id => {
-        console.log(id)
+    const [cart, setCart] = useCart();
+    const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
+            // delete from main database
             const url = `https://pure-lake-46186.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
@@ -27,10 +25,13 @@ const Inventory = ({ product }) => {
                     const remaining = products.filter(product => product._id !== id);
                     setProducts(remaining);
                 })
+            // delete from user Database 
+            const remainingCart = cart.filter(product => product._id !== id);
+            setCart(remainingCart);
         }
     }
     return (
-        <div className=''>
+        <div>
             <Col >
                 <Card className='card-style mx-auto'
                     style={{ width: '40rem' }}>
@@ -50,9 +51,8 @@ const Inventory = ({ product }) => {
                     </Card.Body>
                 </Card>
             </Col>
-            <ToastContainer />
         </div>
     );
 };
 
-export default Inventory;
+export default ShowMyItem;

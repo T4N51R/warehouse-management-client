@@ -5,6 +5,7 @@ import './item.css'
 const Item = ({ item }) => {
     const { _id, name, img, price, qty, about, supplier_name } = item;
     const navigate = useNavigate();
+    const navigate2 = useNavigate();
     const handleUpdateNow = (id) => {
         navigate(`/details/${_id}`)
     }
