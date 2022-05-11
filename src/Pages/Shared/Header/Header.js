@@ -14,7 +14,7 @@ const Header = () => {
         <>
             <Navbar sticky='top' collapseOnSelect expand="lg" bg="primary" variant="dark" className=''>
                 <Container>
-                    <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/">Perfumia</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
@@ -22,6 +22,7 @@ const Header = () => {
                             <Nav.Link href="home#product">Product</Nav.Link>
                             <Nav.Link as={Link} to="inventory">Manage Inventory</Nav.Link>
                             <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
+                            <Nav.Link as={Link} to="review">Reviews</Nav.Link>
                         </Nav>
                         <Nav>
                             {

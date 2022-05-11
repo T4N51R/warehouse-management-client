@@ -12,15 +12,15 @@ const Banner = () => {
             }>
                 <div>
                     <img src={banner1} alt=' ' />
-                    <p className="legend">Legend 1</p>
+                    <p className="legend bg-primary banner-text fs-1 font-weight-bold">Perfume is the art that makes memory speak.</p>
                 </div>
                 <div>
                     <img src={banner2} alt=' ' />
-                    <p className="legend">Legend 2</p>
+                    <p className="legend bg-primary banner-text fs-1 font-weight-bold">Perfume is a story in odour, sometimes poetry in memory.</p>
                 </div>
                 <div>
                     <img src={banner3} alt=' ' />
-                    <p className="legend">Legend 3</p>
+                    <p className="legend bg-primary banner-text fs-1 font-weight-bold">Fragrance makes us dream.</p>
                 </div>
             </Carousel>
         </div>

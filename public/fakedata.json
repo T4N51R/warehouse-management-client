@@ -1,65 +1,44 @@
 [
     {
-        "img": "https://i.ibb.co/m9RT3Hg/service5-1.png",
-        "qty": 18,
-        "name": "Kim Wilder",
-        "gender": "male",
-        "supplier_name": "ORBIXTAR",
-        "about": "Consequat duis consectetur non nostrud proident Lorem cupidatat fugiat. Dolore in duis ipsum amet. Consequat occaecat reprehenderit pariatur esse exercitation cillum ullamco nostrud proident commodo duis sunt enim.\r\n",
-        "price": 193
+        "_id": "6249f04c86087fa2ee32acee",
+        "img": "https://pickaface.net/gallery/avatar/dan5276bb68cda93.png",
+        "ratings": 4.5,
+        "name": "Simon Sears",
+        "about": "Excellent variety. I would recommend this for anyone who wants to try a perfume without breaking the bank or being stuck with a scent that you cannot stand. You can spray the card and let the scent dry down to get a true scent experience. \r\n"
     },
     {
-        "img": "https://i.ibb.co/m9RT3Hg/service5-3.png",
-        "qty": 2,
-        "name": "Gilmore Faulkner",
-        "gender": "male",
-        "supplier_name": "UNQ",
-        "about": "Reprehenderit sit irure deserunt est amet do excepteur exercitation. Occaecat labore in dolore ad sit enim laborum anim deserunt sint nostrud irure nulla. Eu velit ut enim officia exercitation ea aute ex ullamco enim in culpa tempor veniam. In ex dolore irure irure voluptate ad. Sunt laborum aliquip eiusmod sit ad aliquip.\r\n",
-        "price": 111
+        "_id": "6249f04c1bf0a673d67d5123",
+        "img": "https://cdn-icons-png.flaticon.com/512/168/168720.png",
+        "ratings": 5,
+        "name": "Helena Calhoun",
+        "about": "Great perfume samples! The perfect amount to store in my purse for work, a special date, etc. I love that in addition to the samples, the seller threw in an extra perfume to try out.  \r\n"
     },
     {
-        "img": "https://i.ibb.co/m9RT3Hg/service5-3.png",
-        "qty": 10,
-        "name": "Mccarthy Maxwell",
-        "gender": "male",
-        "supplier_name": "COWTOWN",
-        "about": "Duis ut sit consectetur sint et amet mollit aliquip amet velit irure sit Lorem ad. Esse sunt mollit sint voluptate et veniam reprehenderit ullamco incididunt est. Consequat voluptate consectetur ipsum in.\r\n",
-        "price": 110
+        "_id": "6249f04c0bf2f2c35d845dd4",
+        "img": "https://cdn-icons-png.flaticon.com/512/168/168732.png",
+        "ratings": 3.9,
+        "name": "Mueller Figueroa",
+        "about": "All in all, this is a good product. The fragrances are nice and I have found a few favorites. My mom loved it so much when I showed it to her, she had to get one for herself. \r\n"
     },
     {
-        "img": "https://i.ibb.co/m9RT3Hg/service5-3.png",
-        "qty": 9,
-        "name": "Marjorie James",
-        "gender": "female",
-        "supplier_name": "SURETECH",
-        "about": "Magna ex incididunt amet sunt in nostrud velit laboris ex ipsum esse sit aute amet. Incididunt quis nulla cupidatat mollit anim cupidatat. Dolor laboris enim culpa anim duis aliqua labore non. Aliqua et esse consectetur est culpa amet eu tempor aute cupidatat laboris labore officia. Ullamco consectetur sit voluptate sint consectetur veniam irure. Dolore magna excepteur consectetur laboris consequat sint cupidatat mollit elit dolor magna non qui do.\r\n",
-        "price": 135
+        "_id": "6249f04cc4f7a4ab7387e6a0",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB6At_WsdMZrn_ImShsz-Wm3yjXRdjZ905U8gLF_XJ3MJMbaEE9BIk_Q-2ALVvEOJXcfY&usqp=CAU",
+        "ratings": 4.6,
+        "name": "Howe Cotton",
+        "about": "I use this brands perfume daily. Thay have very unique collection. Their fragrance is also long lasting. They also have some of the coolest bootle design. \r\n"
     },
     {
-        "img": "https://i.ibb.co/m9RT3Hg/service5-3.png",
-        "qty": 12,
-        "name": "Hobbs Santos",
-        "gender": "male",
-        "supplier_name": "QUILM",
-        "about": "Ullamco adipisicing ad nisi laboris. Sint sint adipisicing culpa ipsum. Voluptate veniam qui non reprehenderit incididunt eu adipisicing ea pariatur in non exercitation laborum. Velit labore do adipisicing eiusmod sint ullamco et enim est sunt labore.\r\n",
-        "price": 158
+        "_id": "6249f04c6f2b5ffadf6a4e87",
+        "img": "https://cdn-icons-png.flaticon.com/512/921/921006.png",
+        "ratings": 4.9,
+        "name": "Morgan Bowers",
+        "about": "The perfumes came in with cardboard covers the labels on everyone and a free sample! Plus extra perfumes! I’m very pleased and I highly recommend this product! \r\n"
     },
     {
-        "img": "https://i.ibb.co/m9RT3Hg/service5-3.png",
-        "qty": 5,
-        "name": "Cleveland Bush",
-        "gender": "male",
-        "supplier_name": "EXOSPACE",
-        "about": "Exercitation sint occaecat cupidatat do eiusmod adipisicing est minim. Nisi aute quis quis nisi aute labore qui. Exercitation aliquip proident ipsum sint id reprehenderit nisi esse. Pariatur cillum excepteur sit officia incididunt commodo nostrud.\r\n",
-        "price": 133
-    },
-    {
-        "img": "https://i.ibb.co/m9RT3Hg/service5-3.png",
-        "qty": 19,
-        "name": "Jacqueline Soto",
-        "gender": "female",
-        "supplier_name": "ZILLADYNE",
-        "about": "Velit proident deserunt adipisicing laborum eiusmod qui. Ut incididunt ex est aliquip qui velit mollit ad id irure adipisicing. Pariatur magna veniam aliquip quis anim in ut. Non magna occaecat nostrud dolore nulla ad aute minim et officia laboris duis minim excepteur. Et anim voluptate do tempor in id consectetur aliquip excepteur deserunt culpa ea nisi. Cupidatat elit do sint commodo et mollit. Anim velit nostrud voluptate est.\r\n",
-        "price": 113
+        "_id": "6249f04c02e6ca55c0017252",
+        "img": "",
+        "ratings": 5,
+        "name": "Mabel Head",
+        "about": "Although the samples a fairly small, I like trying them out. But wow is it expensive now. So I thought I would see if there was another fragrance I might like. So far I have liked two and disliked one. \r\n"
     }
 ]

@@ -14,6 +14,8 @@ import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
 import { ToastContainer } from 'react-bootstrap';
 import MyItem from './Pages/MyItem/MyItem';
 import Error404 from './Pages/Error404/Error404';
+import Review from './Pages/Home/Review/Review';
+import AllReview from './Pages/AllReview/AllReview';
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/review' element={<AllReview></AllReview>}></Route>
         <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='/additem' element={
           <RequiredAuth>

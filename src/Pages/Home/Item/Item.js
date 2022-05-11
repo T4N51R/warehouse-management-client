@@ -5,7 +5,6 @@ import './item.css'
 const Item = ({ item }) => {
     const { _id, name, img, price, qty, about, supplier_name } = item;
     const navigate = useNavigate();
-    const navigate2 = useNavigate();
     const handleUpdateNow = (id) => {
         navigate(`/details/${_id}`)
     }
@@ -13,14 +12,14 @@ const Item = ({ item }) => {
         <div>
             <Col >
                 <Card className='card-style mx-auto'
-                    style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={img} />
+                    style={{ width: '18rem', height: '550px' }}>
+                    <Card.Img style={{ height: '250px' }} variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <Card.Title>Fee : $ {price}</Card.Title>
+                        <Card.Title>Price : $ {price}</Card.Title>
                         <Card.Title>Quantty : {qty}</Card.Title>
                         <Card.Text>
-                            {about.slice(0, 50)}
+                            {about.slice(0, 50)}....
                         </Card.Text>
                         <Card.Title>Supplier : {supplier_name}</Card.Title>
                     </Card.Body>

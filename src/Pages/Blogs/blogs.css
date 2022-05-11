@@ -1,0 +1,10 @@
+.blogs {
+    background-color: rgb(123, 203, 166);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.blogs:hover {
+    background-color: rgb(20, 29, 25);
+    color: white;
+}

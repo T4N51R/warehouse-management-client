@@ -19,7 +19,7 @@ const ManageInventory = () => {
                     onClick={handleAddNewItem}
                 >Add New Item</Button>
             </div>
-            <Row sm={1} lg={2} className='mx-auto gy-5'>
+            <Row sm={1} lg={3} className='mx-auto gy-5'>
                 {
                     products.map(product => <Inventory
                         key={product._id}

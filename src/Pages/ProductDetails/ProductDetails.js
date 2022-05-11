@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 
@@ -12,6 +12,7 @@ const ProductDetails = () => {
     const { register, handleSubmit } = useForm();
     const [newquantity, setNewQuantity] = useState({})
     const [user, loading] = useAuthState(auth);
+    const navigate = useNavigate()
     useEffect(() => {
         const url = `https://pure-lake-46186.herokuapp.com/products/${productId}`;
         fetch(url)
@@ -66,30 +67,31 @@ const ProductDetails = () => {
     }
     return (
         <div>
-            <h1>This is Inventory for {product?.name}</h1>
             <Card className='card-style mx-auto'
                 style={{ width: '40rem' }}>
-                <Card.Img style={{ height: '12rem' }} variant="top" src={product?.img} />
+                <Card.Img style={{ height: '15rem' }} variant="top" src={product?.img} />
                 <Card.Body>
                     <Card.Title>{product?.name}</Card.Title>
                     <Card.Title>Fee : $ {product?.price}</Card.Title>
                     <Card.Title>Quantty : {product?.qty}</Card.Title>
                     <Card.Text>
-                        {product?.about.slice(0, 50)}
+                        {product?.about.slice(0, 90)}...
                     </Card.Text>
                     <Card.Title>Supplier : {product?.supplier_name}</Card.Title>
                 </Card.Body>
-                {/* button will take on to the inventory page */}
                 <Card.Body>
                     <Button className='w-50 mx-auto d-block' onClick={() => handleDeliverButton(product?._id)}>Deliver</Button>
                 </Card.Body>
             </Card>
-            <div>
+            <div className='w-50 mx-auto fs-3'>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                    <label for="about">Quantity</label>
+                    <label for="about">Increase Quantity</label>
                     <input className='mb-2' placeholder='Quantity' type="number" {...register("qty")} />
                     <input className='btn btn-primary' type="submit" value="Add Quantity" />
                 </form>
+            </div>
+            <div>
+                <Button className='w-50 mx-auto d-block mt-5' onClick={() => navigate('/inventory')}>Manage Inventory</Button>
             </div>
         </div >
     );

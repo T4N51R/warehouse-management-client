@@ -1,3 +1,11 @@
+.banner-text {
+    height: 80px;
+}
+
+.banner-text p {
+    font-size: 58px;
+}
+
 @media screen and (min-width: 992px) {
     .carosel img {
         height: 600px;

@@ -33,14 +33,14 @@ const Inventory = ({ product }) => {
         <div className=''>
             <Col >
                 <Card className='card-style mx-auto'
-                    style={{ width: '40rem' }}>
-                    <Card.Img variant="top" src={img} />
+                    style={{ width: '30rem', height: '600px' }}>
+                    <Card.Img style={{ height: '250px' }} variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Title>Fee : $ {price}</Card.Title>
                         <Card.Title>Quantty : {qty}</Card.Title>
                         <Card.Text>
-                            {about.slice(0, 50)}
+                            {about.slice(0, 50)}...
                         </Card.Text>
                         <Card.Title>Supplier : {supplier_name}</Card.Title>
                     </Card.Body>
